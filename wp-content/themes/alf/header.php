@@ -16,8 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+  <title>My V COol Website</title>
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -25,6 +26,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alf' ); ?></a>
 
 	<header id="masthead" class="site-header">
+  <?php the_header_image_tag(); ?>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();

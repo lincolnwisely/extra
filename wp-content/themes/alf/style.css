@@ -820,3 +820,6 @@ object {
 
 .gallery-caption {
   display: block; }
+
+.hero {
+  height: 600px; }
