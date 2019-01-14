@@ -1,0 +1,9 @@
+.site-content {
+  padding: 1em;
+  margin: 0 auto;
+
+  @include desktop {
+    padding: 2em;
+  }
+
+}

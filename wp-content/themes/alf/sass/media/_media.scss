@@ -28,3 +28,12 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 @import "galleries";
+
+.hero {
+  height: 250px;
+  background-size: cover;
+
+  @include desktop {
+  height: 600px;
+  }
+}

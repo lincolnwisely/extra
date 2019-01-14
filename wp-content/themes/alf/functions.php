@@ -84,6 +84,51 @@ endif;
 add_action( 'after_setup_theme', 'alf_setup' );
 
 /**
+ * Register custom fonts.
+ */
+function alf_fonts_url() {
+	$fonts_url = '';
+
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Lora or Noto Sans TC, translate this to 'off'. Do not translate
+	 * into your own language.
+  https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC:300
+   */
+
+	$lora = _x( 'on', 'Lora font: on or off', 'alf' );
+
+  $heebo = _x( 'on', 'Heebo font: on or off', 'alf' );
+
+  $font_families = array();
+
+  if ( 'off' !== $lora ) {
+
+		$font_families[] = 'Lora:400,400i';
+	}
+
+
+  if ( 'off' !== $heebo ) {
+
+		$font_families[] = 'Heebo:300,400,700';
+	}
+
+
+  if ( in_array('on', array($lora, $heebo)) ) {
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -120,6 +165,13 @@ add_action( 'widgets_init', 'alf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function alf_scripts() {
+
+  /**
+ * Enqueue Google Fonts.
+ */
+
+  wp_enqueue_style('alf_fonts', alf_fonts_url() );
+
 	wp_enqueue_style( 'alf-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'alf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
