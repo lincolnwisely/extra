@@ -1,4 +1,4 @@
-var themename = 'alf';
+var themename = 'vincente';
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc
@@ -69,4 +69,6 @@ gulp.task('watch', function() {
 
 
 // Default task (runs at initiation: gulp --verbose)
+// npm install
+// gulp
 gulp.task('default', ['watch']);
