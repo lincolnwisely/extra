@@ -3,7 +3,8 @@
   margin: 0 auto;
 
   @include desktop {
-    padding: 2em;
+    padding: 0 2em 1em;
+    max-width: 1100px;
   }
 
 }

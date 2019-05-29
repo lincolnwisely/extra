@@ -11,8 +11,17 @@
 
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('article-teaser'); ?>>
+<article id="post-<?php the_ID(); ?>"
+<?php if(is_sticky()){
+  post_class('article-teaser col-12');
+} else {
+  post_class('article-teaser col-sm-6 col-12');
+}
+?>>
 	<header class="entry-header">
+  <div class="category">
+      <?php the_category(' | ') ?>
+    </div>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -21,23 +30,22 @@
 		endif;
 
 			?>
-
 	</header><!-- .entry-header -->
 
 
 	<div class="entry-content">
-
-    <?php
-        foreach((get_the_category()) as $category) {
-          echo '<a href="' . $category->cat_slug . '">' . $category->cat_name . '</a>' . ' ';
-      }
-    ?>
-
-  	<?php if ( has_post_thumbnail() ) {
-	          the_post_thumbnail('medium_large');
+    <div class="teaser-img">
+      <?php
+        if ( has_post_thumbnail() ) {
+          if(is_sticky()){
+            the_post_thumbnail('full');
+          } else {
+            the_post_thumbnail('medium-large');
           }
-    ?>
-      <p class="teaser-description">
+        }
+      ?>
+    </div>
+    <!-- <p class="teaser-description">
     <?php
     $mykey_values = get_post_custom_values( 'standard_seo_post_meta_description' );
     if (!empty($mykey_values)) {
@@ -46,7 +54,7 @@
       }
     }
     ?>
-    </p>
+    </p> -->
 
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

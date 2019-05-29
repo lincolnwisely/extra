@@ -1,9 +1,10 @@
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: $font__sans;
+	font-family: $font__serif;
 	color: #fff;
-	background-color: #fff;
+  background-color: #fff;
+  text-align: center;
 
   @include desktop {
 		padding: 1em 2em;
@@ -18,7 +19,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 1.6em;
-	font-weight: 900;
+	font-weight: 400;
 	line-height: 1em;
 
 	a {
@@ -42,14 +43,14 @@
 @include desktop {
   .site-header {
     display: flex;
-    justify-content: start;;
+    justify-content: start;
   }
 
-  .site-branding {
-    width: 35%;
-  }
+  // .site-branding {
+  //   width: 35%;
+  // }
 
-  #site-navigation {
-      width: 55%;
-    }
+  // #site-navigation {
+  //     width: 65%;
+  //   }
 }

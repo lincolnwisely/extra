@@ -7,8 +7,74 @@
     width: 50%;
     float: left;
   }
+
+  .teaser-img {
+    position: relative;
+
+    img {
+      max-height: 280px;
+      object-fit: cover;
+    }
+  }
 }
+
+
+
 
 .sticky {
   width: 100%;
+  position: relative;
+
+  .entry-header {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    padding: 10px 30px 10px;
+    transform: translateX(-50%);
+    z-index: 1;
+    border: 2px solid white;
+    transition: all .3s ease;
+
+    @include desktop {
+      top: 25%;
+    }
+
+    a, .category{
+      transition: all .3s ease;
+
+      color: $color__white;
+    }
+
+    &:hover {
+      transition: all .3s ease;
+      background-color: $color__white;
+
+
+      a, .category{
+        transition: all .3s ease;
+        color: $color__black;
+      }
+    }
+  }
+
+
+
+  .teaser-img {
+    position: relative;
+
+    img {
+      max-height: 360px;
+      object-fit: cover;
+    }
+
+    &:after {
+      content: '';
+      background-color: rgba(0,0,0,.6);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: calc(100% - 9px);
+      left: 0;
+    }
+  }
 }
