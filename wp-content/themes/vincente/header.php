@@ -40,19 +40,21 @@
       </div>
       <div class="col-12 col-sm-6">
         <div class="site-branding">
-          <?php
+
+            <div class="site-title">
+            <?php
           the_custom_logo();
           if ( is_front_page() && is_home() ) :
             ?>
-            <div class="site-title">
-              <h1 >
+              <h1>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
               </h1>
               <a href="tel:1-314-280-8301" id="header-phone">Let's Chat! 314-280-8301</a>
-          </div>
+
             <?php
           else :
             ?>
+
             <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
             <a href="tel:1-314-280-8301" id="header-phone">Let's Chat! 314-280-8301</a>
             <?php
@@ -62,6 +64,7 @@
             ?>
             <p class="site-description"><?php echo $vincente_description; /* WPCS: xss ok. */ ?></p>
           <?php endif; ?>
+          </div>
         </div><!-- .site-branding -->
       </div>
     </div>

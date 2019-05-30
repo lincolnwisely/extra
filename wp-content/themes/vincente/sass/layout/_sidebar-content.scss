@@ -1,22 +1,46 @@
-.content-area {
-	float: right;
-	margin: 0 0 0 (-$size__site-sidebar);
-	width: $size__site-main;
+// .content-area {
+// 	float: right;
+// 	margin: 0 0 0 (-$size__site-sidebar);
+// 	width: $size__site-main;
+// }
+
+// .site-main {
+// 	margin: 0 0 0 $size__site-sidebar;
+// }
+
+// .site-content .widget-area {
+// 	float: left;
+// 	overflow: hidden;
+// 	width: $size__site-sidebar;
+// }
+
+// .site-footer {
+// 	clear: both;
+// 	width: $size__site-main;
+// }
+
+h2.widget-title {
+  font-size: 1.2em;
+  text-align: center;
 }
 
-.site-main {
-	margin: 0 0 0 $size__site-sidebar;
-}
+aside .widget_recent_entries {
 
-.site-content .widget-area {
-	float: left;
-	overflow: hidden;
-	width: $size__site-sidebar;
-}
+  ul {
+    list-style: none;
+    margin: 0;
 
-.site-footer {
-	clear: both;
-	width: $size__site-main;
+    li {
+      border: 2px solid $color__black;
+      padding: 10px;
+      margin-bottom: 15px;
+
+
+      a {
+        font-size: .8em;
+      }
+    }
+  }
 }
 
 @import "no-sidebar";

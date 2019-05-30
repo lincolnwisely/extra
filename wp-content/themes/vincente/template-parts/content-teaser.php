@@ -19,7 +19,7 @@
 }
 ?>>
 	<header class="entry-header">
-  <div class="category">
+  <div class="category-link">
     <?php the_category(' | ') ?>
     </div>
 		<?php
