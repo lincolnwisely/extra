@@ -1,9 +1,104 @@
 footer {
-  padding: 0 1em;
-  max-width: 1100px;
-  margin: 0 auto;
+  background: #eee;
+  .site-info {
+    padding: 1em;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-  @include desktop {
-    padding: 0 2em;
+    @include desktop {
+      padding: 2em 2em 0;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    #text {
+      margin-left: 20px;
+
+    }
+
+    #footer-cta {
+      margin-left: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      font-family: $font__serif;
+
+      a {
+        text-decoration: none;
+        padding: 10px;
+        color: $color__orange;
+        font-size: 1.2rem;
+      }
+
+
+      @include desktop {
+        height: 70px;
+        margin-left: 30px;
+        background-color: $color__olive;
+
+        a {
+          color: $color__white;
+          padding: 20px;
+          font-size: .8rem;
+
+        }
+      }
+    }
+
+    #arin-text {
+      text-align: center;
+      margin-bottom: 30px;
+
+      @include desktop {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+    }
+    #garcia-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      @include desktop {
+        flex-direction: row;
+        margin-bottom: 10px;
+
+      }
+
+      img {
+        max-height: 70px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  #lincoln  {
+
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: .6em;
+      color: $color__gray;
+    }
+
+    a {
+      color: $color__gray;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: .7rem;
+    color: $color__olive;
+  }
+
+  a {
+    color: $color__olive;
   }
 }

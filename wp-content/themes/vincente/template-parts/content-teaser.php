@@ -15,12 +15,12 @@
 <?php if(is_sticky()){
   post_class('article-teaser col-12');
 } else {
-  post_class('article-teaser col-sm-6 col-12');
+  post_class('article-teaser col-sm-6 col-md-4 col-12');
 }
 ?>>
 	<header class="entry-header">
   <div class="category">
-      <?php the_category(' | ') ?>
+    <?php the_category(' | ') ?>
     </div>
 		<?php
 		if ( is_singular() ) :
@@ -35,15 +35,17 @@
 
 	<div class="entry-content">
     <div class="teaser-img">
-      <?php
-        if ( has_post_thumbnail() ) {
-          if(is_sticky()){
+      <?php if ( has_post_thumbnail() ) : ?>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+          <?php if(is_sticky()){
             the_post_thumbnail('full');
           } else {
             the_post_thumbnail('medium-large');
           }
-        }
-      ?>
+          ?>
+          </a>
+      <?php endif; ?>
+
     </div>
     <!-- <p class="teaser-description">
     <?php

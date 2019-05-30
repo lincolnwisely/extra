@@ -1,14 +1,23 @@
 .site-header {
 	position: relative;
-	padding: 1em;
-	font-family: $font__serif;
+  font-family: $font__serif;
+  margin-top: 20px;
 	color: #fff;
   background-color: #fff;
-  text-align: center;
+  padding: 0 2em;
+
+  h1 {
+    margin: 0 0 10px 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   @include desktop {
-		padding: 1em 2em;
-    }
+    margin-top: 50px;
+  }
+
 }
 
 .site-branding {
@@ -16,20 +25,50 @@
 }
 
 .site-title {
+  text-align: center;
+  margin-bottom: 30px;
 	margin: 0;
 	padding: 0;
-	font-size: 1.6em;
 	font-weight: 400;
-	line-height: 1em;
+  line-height: 1em;
+  // width: 400px;
+
+  h1 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+
+
+  @include desktop {
+    text-align: left;
+    margin-bottom: 20px;
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.6em;
+    }
+  }
 
 	a {
-		color: #222;;
+    color: $color__olive;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
 			text-decoration: underline;
-		}
+    }
+
+    &#header-phone {
+      font-size: .6rem;
+      font-family: $font__sans;
+      letter-spacing: 1px;
+      // text-transform: uppercase;
+      padding: 3px 8px;
+      border: 1px solid $color__black;
+      color: $color__black;
+      margin-top: 20px;
+
+    }
 	}
 }
 
@@ -37,20 +76,7 @@
 	margin: 0;
 	font-size: .9em;
 	font-style: italic;
-	font-weight: 100;
-}
+  font-weight: 100;
+  color: $color__olive;
 
-@include desktop {
-  .site-header {
-    display: flex;
-    justify-content: start;
-  }
-
-  // .site-branding {
-  //   width: 35%;
-  // }
-
-  // #site-navigation {
-  //     width: 65%;
-  //   }
 }

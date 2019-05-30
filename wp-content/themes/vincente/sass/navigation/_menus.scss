@@ -1,7 +1,6 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 
 	ul {
@@ -90,18 +89,18 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  transition: all .3s ease;
+  margin-bottom: 30px;
 }
 
 .main-navigation.toggled ul {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 37.5em) {
+  @include desktop {
 	.menu-toggle {
     display: none;
     transition: all .3s ease;
@@ -109,9 +108,18 @@
 	.main-navigation ul {
     display: flex;
     flex-direction: inherit;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     width: 100%;
 
+    li {
+      margin-left: 50px;
+
+      &:hover {
+        a {
+          border-bottom: 4px solid $color__olive;
+        }
+      }
+    }
 	}
 }
 
