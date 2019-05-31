@@ -125,21 +125,39 @@
 
 .comment-navigation,
 .posts-navigation,
-.post-navigation {
+.post-navigation,
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop {
+      flex-direction: row;
+      margin: 0
+    }
+
+  .nav-previous, .nav-next {
+    border: 2px solid $color__black;
+    padding: 10px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: $color__orange;
+    text-align: center;
+
+    @include desktop {
+      max-width: 48%;
+    }
+
+    a {
+      color: $color__white;
+      font-size: 1.5em;
+      font-family: $font__serif;
+      text-decoration: none;
+    }
+  }
 
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
 	}
 }

@@ -1,0 +1,23 @@
+article {
+
+  .entry-header {
+    h1 {
+      margin-bottom: 15px;
+      padding: 0;
+      font-size: 1.8rem;
+
+      @include desktop {
+        padding: 0 50px 0 0;
+      }
+    }
+
+    .entry-meta {
+      margin-bottom: 20px;
+      font-size: .8rem;
+
+      a {
+        color: $color__olive;
+      }
+    }
+  }
+}

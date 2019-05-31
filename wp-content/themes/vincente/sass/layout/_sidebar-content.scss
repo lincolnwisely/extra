@@ -37,9 +37,17 @@ aside .widget_recent_entries {
       margin-bottom: 15px;
       text-align: center;
 
-
       a {
         font-size: .8em;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: $color__black;
+        color: $color__white;
+        a {
+          color: $color__white;
+        }
       }
     }
   }
@@ -56,6 +64,15 @@ aside .widget_categories {
 
     li {
       margin-right: 10px;
+
+      a {
+        color: $color__olive;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
     }
 
   }

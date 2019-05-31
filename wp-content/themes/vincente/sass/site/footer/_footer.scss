@@ -1,4 +1,5 @@
 footer {
+  font-family: $font__sans;
   background: #eee;
   .site-info {
     margin: 2em auto 0;
@@ -39,6 +40,7 @@ footer {
         height: 70px;
         margin-left: 30px;
         background-color: $color__olive;
+        border: 2px solid $color__black;
 
         a {
           color: $color__white;

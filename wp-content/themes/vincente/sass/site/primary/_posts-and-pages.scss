@@ -31,9 +31,9 @@
   margin-bottom: .5em;
   letter-spacing: 1px;
   text-transform: uppercase;
-
+  font-family: $font__sans;
   a {
-    color: $color__gray;
+    color: $color__olive;
   }
 }
 
@@ -43,10 +43,10 @@
 }
 
 
-// NAV AT BOTTOM OF POSTS
-.nav-links {
-  a {
-    padding: 20px;
-    border:  2px solid $color__black;
-  }
-}
+// // NAV AT BOTTOM OF POSTS
+// .nav-links {
+//   a {
+//     padding: 20px;
+//     border:  2px solid $color__black;
+//   }
+// }
