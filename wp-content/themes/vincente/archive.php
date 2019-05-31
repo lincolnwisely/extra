@@ -23,7 +23,7 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+      <div class="container"><div class="row">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -34,7 +34,7 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', 'teaser' );
 
 			endwhile;
 
@@ -42,11 +42,11 @@ get_header();
 
 		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content', 'teaser' );
 
 		endif;
 		?>
-
+</div></div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

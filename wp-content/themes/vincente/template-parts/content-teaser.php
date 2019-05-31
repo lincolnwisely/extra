@@ -12,7 +12,7 @@
 
 
 <article id="post-<?php the_ID(); ?>"
-<?php if(is_sticky()){
+<?php if(is_sticky() &&  is_front_page()){
   post_class('article-teaser col-12');
 } else {
   post_class('article-teaser col-sm-6 col-md-4 col-12');
