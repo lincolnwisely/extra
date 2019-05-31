@@ -33,7 +33,7 @@ get_header();
       ?>
       </main><!-- #main -->
     </div><!-- #primary -->
-  </div><!-- #9 COLUMNS -->
+
 <?php
 get_sidebar();
 get_footer();

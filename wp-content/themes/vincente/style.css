@@ -920,16 +920,34 @@ h2.widget-title {
 aside .widget_recent_entries ul {
 	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 
 aside .widget_recent_entries ul li {
 	border: 2px solid #222;
-	padding: 10px;
+	padding: 6px;
 	margin-bottom: 15px;
+	text-align: center;
 }
 
 aside .widget_recent_entries ul li a {
 	font-size: .8em;
+}
+
+aside .widget_categories ul {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+aside .widget_categories ul li {
+	margin-right: 10px;
 }
 
 .no-sidebar .content-area {
@@ -2898,7 +2916,6 @@ html {
 	margin-top: 20px;
 	color: #fff;
 	background-color: #fff;
-	padding: 0 2em;
 }
 
 .site-header h1, .site-header p {
@@ -3036,9 +3053,8 @@ footer {
 }
 
 footer .site-info {
-	padding: 1em;
+	margin: 2em auto 0;
 	max-width: 1100px;
-	margin: 0 auto;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: center;
@@ -3049,7 +3065,6 @@ footer .site-info {
 
 @media (min-width: 700px) {
 	footer .site-info {
-		padding: 2em 2em 0;
 		-ms-flex-direction: row;
 		    flex-direction: row;
 		-ms-flex-pack: justify;
